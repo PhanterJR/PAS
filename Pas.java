@@ -12,7 +12,5 @@ public class Pas{ //Nome da classe de nosso trabalho
 			"===========================================================<br>"+
 			"Digite o número da opção que deseja realizar clique em 'OK'</html>";
 		String opcao=JOptionPane.showInputDialog(menu); //Página 142 do livro
-
-
 	}
 }
