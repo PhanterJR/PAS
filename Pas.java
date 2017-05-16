@@ -12,6 +12,14 @@ public class Pas{ //Nome da classe de nosso trabalho
         String reg_descricoes[] = new String[500];
         String reg_envolvidos[] = new String[500];
         do{ //pagina 151 do {//bloco de comandos}while (expressão lógica)
+            total_ocorrencias=0;
+            for (int y=0;y<500 ;y++ ) {
+                if ((reg_ocorrencias[y]=="")||(reg_ocorrencias[y]==null)){
+
+                } else{
+                    total_ocorrencias++;
+                }
+            }
             String ocorrencia_atual = "";
             String local_atual="";
             String descricao_atual="";
