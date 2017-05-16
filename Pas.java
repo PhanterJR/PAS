@@ -1,8 +1,8 @@
 
 import javax.swing.JOptionPane; //Página 142 do livro
-public class Pas{ //Nome da classe de nosso trabalho
+public class Pas{ //Nome da classe de nosso trabalho, está Pas, aconselho mudar, lembre-se que o nome do arquivo tb tem que mudar, exemplo, se colocar "PasJunior" salve como "PasJunior.java"
 
-    public static void main(String[] args) { //Este é o método Main
+    public static void main(String[] args) { //Este é o método main
         Boolean sair_programa=false;
         Boolean sair_ordem_ocorrencia;
         String menu;
@@ -89,7 +89,6 @@ public class Pas{ //Nome da classe de nosso trabalho
         reg_envolvidos[13]="Maria, Maurício";
         reg_envolvidos[14]="Cirano, Viana, Rosalia";
         reg_envolvidos[15]="Ingrid, Marcelo, Hélio";
-
 
         do{ //pagina 151 do {//bloco de comandos}while (expressão lógica)
             total_ocorrencias=0;
@@ -301,8 +300,6 @@ public class Pas{ //Nome da classe de nosso trabalho
                                 }
                             }
                             cont_caso2++;
-
-
                         }while(sair_ordem_ocorrencia==false);
                         rank1[0]=0;
                         rank1[1]=0;
@@ -346,24 +343,21 @@ public class Pas{ //Nome da classe de nosso trabalho
                                     }
 
                                 }
-                            }
-                            
+                            }    
                         }
                         String texto_caso_2="<html><i><b>RELATÓRIO - AS 5 MAIORES OCORRÊNCIAS</b></i><br><br>";
                                         
                         for (int r=0; r<5; r++) {
-                            texto_caso_2=texto_caso_2+(r+1)+ " - "+ vfiltro1[rank2[r]]+ " com "+vfiltro2[rank2[r]]+" OCORRÊNCIA(S)<br>";
+                            texto_caso_2=texto_caso_2+(r+1)+ " - "+ vfiltro1[rank2[r]]+ " com "+vfiltro2[rank2[r]]+" ocorrência(s)<br>";
                         }
                         texto_caso_2=texto_caso_2+"==============================================================<br>PRESSIONE ENTER PARA CONTINUAR</html>";
                         String nada=JOptionPane.showInputDialog(texto_caso_2);             
                     }
-
-
                     break;
                 case "3":
                     String texto_caso_3="";
                     if ((reg_ocorrencias[0]=="")||(reg_ocorrencias[0]==null)){
-                        JOptionPane.showMessageDialog(null, "Não há registros"); //Não tem no livro, porém poderia colocar "System.out.ln("Não há ocorrencias);"
+                        JOptionPane.showMessageDialog(null, "Não há registros"); //Não tem no livro, porém poderia colocar "System.out.ln("Não há ocorrencias); ou usar o JOptionPane.showInputDialog("Não há ocorrencias");"
   
                     }else{
                         texto_caso_3="<html><i><b>OCORRÊNCIAS E SEUS ENVOLVIDOS</b></i><br><br>";
@@ -385,7 +379,7 @@ public class Pas{ //Nome da classe de nosso trabalho
                     String posicao_atual_c4="";
                     String texto_caso_4="";
                     if ((reg_ocorrencias[0]=="")||(reg_ocorrencias[0]==null)){
-                        JOptionPane.showMessageDialog(null, "Não há ocorrências"); //Não tem no livro, porém poderia colocar "System.out.ln("Não há ocorrencias);"
+                        JOptionPane.showMessageDialog(null, "Não há ocorrências"); //Não tem no livro, porém poderia colocar "System.out.ln("Não há ocorrencias); ou usar o JOptionPane.showInputDialog("Não há ocorrencias");"
                         sair_ordem_ocorrencia=true;
                     } else {
                         sair_ordem_ocorrencia=false;
@@ -404,7 +398,6 @@ public class Pas{ //Nome da classe de nosso trabalho
                                         vfiltro2[z]=vfiltro2[z]+1;
                                         break;
                                     }
-                                    
                                 }
                             }
                             cont_caso2++;
@@ -417,7 +410,6 @@ public class Pas{ //Nome da classe de nosso trabalho
                                 double porcentagem = (vfiltro2[x]/(double)total_ocorrencias*100.0);
                                 String porcentagem_formatado=String.format("%.2f",porcentagem);
                                 texto_caso_4=texto_caso_4+(x+1)+ " - "+ vfiltro1[x]+ " com "+porcentagem_formatado+"%<br>";
-
                             }
                         }
                     }
@@ -431,7 +423,7 @@ public class Pas{ //Nome da classe de nosso trabalho
                     String posicao_atual_c5="";
                     String texto_caso_5="";
                     if ((reg_locais[0]=="")||(reg_locais[0]==null)){
-                        JOptionPane.showMessageDialog(null, "Não há ocorrências"); //Não tem no livro, porém poderia colocar "System.out.ln("Não há ocorrencias);"
+                        JOptionPane.showMessageDialog(null, "Não há ocorrências"); //Não tem no livro, porém poderia colocar "System.out.ln("Não há ocorrencias"); ou usar o JOptionPane.showInputDialog("Não há ocorrencias");"
                         sair_ordem_ocorrencia=true;
                     } else {
                         sair_ordem_ocorrencia=false;
@@ -450,7 +442,6 @@ public class Pas{ //Nome da classe de nosso trabalho
                                         vfiltro2[z]=vfiltro2[z]+1;
                                         break;
                                     }
-                                    
                                 }
                             }
                             cont_caso2++;
@@ -461,7 +452,6 @@ public class Pas{ //Nome da classe de nosso trabalho
                                 break;
                             }else{
                                 texto_caso_5=texto_caso_5+(x+1)+ " - "+ vfiltro1[x]+ " com "+vfiltro2[x]+" ocorrencia(s)<br>";
-
                             }
                         }
                     }
@@ -469,15 +459,13 @@ public class Pas{ //Nome da classe de nosso trabalho
                     String nada5=JOptionPane.showInputDialog(texto_caso_5);                     
                     break;
                 case "9":
-                    JOptionPane.showMessageDialog(null, "Programa sendo finalizado"); //Não tem no livro, porém poderia colocar "System.out.ln("Programa sendo finalizado");"
+                    JOptionPane.showMessageDialog(null, "Programa sendo finalizado"); //Não tem no livro, porém poderia colocar "System.out.ln("Programa sendo finalizado"); ou usar o JOptionPane.showInputDialog("Programa sendo finalizado");"
                     sair_programa=true; 
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida"); //Não tem no livro, porém poderia colocar "System.out.ln("Opção Inválida);"
+                    JOptionPane.showMessageDialog(null, "Opção inválida"); //Não tem no livro, porém poderia colocar "System.out.ln("Opção Inválida"); ou usar o JOptionPane.showInputDialog("Opção Inválida");"
                     break;
             }
         }while(sair_programa==false);
-
-
     }
 }
